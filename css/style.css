@@ -1,2 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
-/* font-family: "Noto Sans KR", sans-serif; */
+
+html,body{
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+.header{
+  max-width: 1620px;
+  height: 105px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  margin-left: 20px;
+}
+.menu{
+  display: flex;
+}
+.menu>li{
+  position: relative;
+}
+.menu>li>a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.submenu{
+  position: absolute;
+  left: -10px; /* submenu랑 menu 중간에 두기 */
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 15px 10px;
+  z-index: 10;
+}
+.submenu>li{
+  margin: 5px 0;
+}
+.submenu>li>a{
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+}
+.gnb{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.gnb>li{
+  cursor: pointer;
+}
+.gnb>li:nth-child(2){
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.gnb>li:nth-child(2)>span{
+  width: 100%;
+  border-top: 3px solid #004f4a;
+}
+.gnb>li:nth-child(2)>span:nth-child(2){
+  width: 75%;
+}
+
+.sitemap_bg{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #004f4a, #22bf8b);
+  color: #fff;
+}
+.sitemap_wrap{
+  max-width: 1620px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.sitemap_wrap .close{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.sitemap_wrap .close>span{
+  width: 100%;
+  border-top: 3px solid #fff;
+  position: absolute;
+  transform-origin: center center; /* 회전 축 중심점 */
+}
+.sitemap_wrap .close>span:nth-child(1){
+  transform: rotate(45deg)
+}
+.sitemap_wrap .close>span:nth-child(2){
+  transform: rotate(-45deg)
+}
+.sitemap{
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 180px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sitemap>li>a{
+  font-size: 22px;
+  font-weight: 700;
+}
+.s_submenu{
+  margin-top: 40px;
+}
+.s_submenu>li{
+  margin: 10px 0;
+}
+.s_submenu>li>a{
+  /* display: block; */
+  font-size: 18px;
+  padding: 2px 3px;
+}
+
+
+
+@media all and (max-width: 1200px){
+  .menu{
+    display: none;
+  }
+}
+@media all and (max-width: 600px){
+  .gnb>li:nth-child(1){
+    display: none;
+  }
+}
