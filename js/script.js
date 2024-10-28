@@ -31,3 +31,31 @@ if(windWidth <= 992){
 $(window).resize(function(){ /* 윈도우 사이즈가 바뀔때마다 새로고침 */
   location.reload();
 })
+
+
+// 슬라이드 스와이퍼
+const main = new Swiper(".main .swiper", {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  pagination: {
+    el: ".ctrl_box .btns .swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".btn_next",
+    prevEl: ".btn_prev",
+  },
+});
+/* pagination 2개 넣으려고 하나 더 넣음 */
+const progressBar = new Swiper(".main .swiper", {
+  loop: true,
+  pagination: {
+    /* ctrl_box 안에 2개있으니까 자식으로 접근해야함 */
+    el: ".ctrl_box>.swiper-pagination",
+    type: "progressbar",
+  },
+})
+
+main.controller.control = progressBar;

@@ -499,7 +499,7 @@ button.swiper-pagination-bullet {
 .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
   width: 100%;
-  height: var(--swiper-pagination-progressbar-size, 4px);
+  height: var(--swiper-pagination-progressbar-size, 2px);
   left: 0;
   top: 0;
 }
