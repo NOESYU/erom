@@ -485,6 +485,7 @@ html,body{
   font-size: 26px;
   font-weight: 700;
   margin: 20px 0 30px;
+  transition: all 0.3s;
 }
 .con1_list li a p:nth-of-type(2){
   height: 0px;
@@ -514,3 +515,36 @@ html,body{
   height: 34px;
 }
 
+@media all and (max-width: 1200px){
+  .con1_list li a p:nth-of-type(1){
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 992px){
+  .con1_list li a p:nth-of-type(1){
+    font-size: 17px;
+  }
+}
+@media all and (max-width: 767px){
+  .conwrap{
+    width: 90%;
+  }
+  .conwrap>p:nth-child(2){
+    font-size: 16px;
+  }
+  .con1_list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .con1_list li{
+    width: 33%;
+    flex: none; /*  1주면서 크기준거 없앰 */
+    border: 0 !important;
+    padding: 2px;
+    box-sizing: border-box;
+  }
+  .con1_list li a{
+    border: 1px solid #ddd;
+    height: 202px;
+  }
+}

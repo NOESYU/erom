@@ -28,8 +28,19 @@ if(windWidth <= 992){
     $(this).siblings().removeClass("site_toggle");
   })
 } 
-$(window).resize(function(){ /* 윈도우 사이즈가 바뀔때마다 새로고침 */
+
+// $(window).resize(function(){ /* 윈도우 사이즈가 바뀔때마다 새로고침 */
+//   location.reload();
+// })
+
+// 사이즈 바뀔때마다가 아닌 시간을 주고 호출되게끔 변경
+let resizeTimer = null;
+function rload(){
   location.reload();
+}
+$(window).resize(function(){
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(rload, 400);
 })
 
 
