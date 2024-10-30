@@ -435,7 +435,7 @@ html,body{
 }
 .conwrap{
   width: 95%;
-  max-width: 1640px;
+  max-width: 1620px;
   margin: 0 auto;
   text-align: center;
 }
@@ -516,7 +516,7 @@ html,body{
 }
 
 .con2{
-  max-width: 1640px;
+  max-width: 1620px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -581,10 +581,189 @@ html,body{
   background-color: #004f4a;
 }
 
+.con3{
+  width: 100%;
+  color: #fff;
+  background-color: #004f4a;
+  padding: 135px 0;
+}
+.con3_wrap{
+  width: 95%;
+  max-width: 1620px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.con3_left{
+  /* width: 45%; */
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+.con3_left>p:nth-child(1){
+  font-size: 36px;
+  color: #ddd;
+}
+.con3_left>p:nth-child(2){
+  font-size: 52px;
+  margin: 50px 0 200px;
+}
+.con3_left>p:nth-child(1)::before{
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: #90bd20;
+  border-radius: 50%;
+}
+.con3_left>a{
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 5px;
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 400;
+}
+.con3_left>a::after{
+  content: "→";
+  width: 30px;
+  height: 30px;
+  color: #333;
+  background-color: #d2ecea;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7px;
+}
+.con3_right{
+  width: 55%;
+}
+.con3_right>li{
+  border-bottom: 2px solid #fff;;
+}
+.con3_right>li:nth-child(1){
+  border-top: 2px solid #fff;
+}
+.con3_right li a{
+  display: block;
+  padding: 40px 0;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+.con3_right li a span{
+  display: block;
+  width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.con3_right li a span:nth-child(1){
+  font: 700 24px "Noto Sans KR";
+}
+.con3_right li a span:nth-child(2){
+  font: 700 24px "Noto Sans KR";
+  margin: 3px 0 8px;
+}
+.con3_right li a span:nth-child(3){
+  font: 700 18px "Montserrat";
+  color: #ddd;
+}
+
+.con4{
+  width: 100%;
+  padding: 135px 0;
+}
+.con4_wrap{
+  width: 90%;
+  max-width: 1620px;
+  margin: 0 auto;
+}
+.con4_title>p:nth-child(1){
+  font: 700 32px "Noto Sans Kr";
+  color: #666;
+}
+.con4_title>p:nth-child(1)::before{
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: #90bd20;
+  border-radius: 50%;
+}
+.con4_title>p:nth-child(2){
+  margin: 50px 0 100px;
+  font: 700 46px "Montserrat";
+}
+.con4_list{
+  display: flex;
+}
+.con4_list>li{
+  width: 25%;
+  height: 560px;
+  position: relative;
+  transition: all 0.5s;
+}
+.con4_list>li:nth-child(1){
+  background: url(../imgs/section04_img01.png) center center no-repeat;
+  background-size: cover;
+}
+.con4_list>li:nth-child(2){
+  background: url(../imgs/section04_img02.png) center center no-repeat;
+  background-size: cover;
+}
+.con4_list>li:nth-child(3){
+  background: url(../imgs/section04_img03.png) center center no-repeat;
+  background-size: cover;
+}
+.con4_list>li:nth-child(4){
+  background: url(../imgs/section04_img04.png) center center no-repeat;
+  background-size: cover;
+}
+.con4_list>li::after{
+  content: "▶";
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.con4_list>li>a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 60px 30px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 10;
+}
+.con4_list>li>a>p:nth-child(1){
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font: 600 20px "Montserrat";
+}
+.con4_list>li>a>p:nth-child(2){
+  position: absolute;
+  left: 30px;
+  bottom: 60px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
 
 @media all and (max-width: 1400px){
   .con2_title:nth-child(1){
-    width: 180px;
+    margin-right: 20px;
   }
   .con2_title:nth-child(1)>p>br{
     display: none;
@@ -604,9 +783,6 @@ html,body{
     margin: 0 auto;
     box-sizing: border-box;
   }
-  .con2_title:nth-child(1){
-    width: 33%;
-  }
   .con2_box:nth-child(2){
     padding-left: 50px;
     border-left: 0;
@@ -616,6 +792,28 @@ html,body{
 @media all and (max-width: 992px){
   .con1_list li a p:nth-of-type(1){
     font-size: 17px;
+  }
+  /* con3 줄바꿈 */
+  .con3_wrap{
+    flex-wrap: wrap;
+  }
+  .con3_left>p:nth-child(1)>br{
+    display: none;
+  }
+  .con3_left>p:nth-child(1){
+    width: 100%;
+    font-size: 28px;
+  }
+  .con3_left>p:nth-child(2){
+    margin-bottom: 50px;
+  }
+  .con3_right{
+    width: 100%;
+  }
+  .con3_left>a{
+    position: absolute;
+    bottom: -80px;
+    left: 40%;
   }
 }
 @media all and (max-width: 767px){
@@ -643,15 +841,38 @@ html,body{
   .con2_title>p:nth-child(3){
     font-size: 18px;
   }
+  .con3_right li a span:nth-child(2), .con3_right li a span:nth-child(1) {
+    font-size: 20px;
+  }
+  .con3_right li a span:nth-child(3){
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 600px){
   .con2_box{
+    width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+  .con2_title{
+    width: 100%;
   }
   .con2_title>p:nth-child(3){
     width: 100%;
   }
   .con2_title>a{
     margin: 20px 0;
+  }
+  .con2_box:nth-child(2) .con2_title{
+    order: 1;
+  }
+  .con2_box:nth-child(2)>img{
+    order: 2;
+  }
+  .con2_box:nth-child(1){
+    padding-right: 0;
+  }
+  .con2_box>img{
+    width: 60%;
   }
 }
