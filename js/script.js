@@ -70,3 +70,18 @@ const progressBar = new Swiper(".main .swiper", {
 })
 
 main.controller.control = progressBar;
+
+
+// footer
+$(".family_list").hide();
+$(".family_btn").click(function(){
+  $(".family_list").slideToggle();
+  $(this).toggleClass("btn_toggle");
+})
+
+
+// top 버튼
+$(".top_btn").click(function(){
+  /* body 엔 scrollTop 없음 */
+  $("html").animate({scrollTop:"0"}, 500);
+})

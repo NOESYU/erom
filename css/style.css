@@ -523,7 +523,7 @@ html,body{
   padding: 70px 0 115px;
 }
 .con2_box{
-  width: 48%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -676,7 +676,7 @@ html,body{
   padding: 135px 0;
 }
 .con4_wrap{
-  width: 90%;
+  width: 95%;
   max-width: 1620px;
   margin: 0 auto;
 }
@@ -721,19 +721,6 @@ html,body{
   background: url(../imgs/section04_img04.png) center center no-repeat;
   background-size: cover;
 }
-.con4_list>li::after{
-  content: "▶";
-  background-color: #fff;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 .con4_list>li>a{
   display: flex;
   width: 100%;
@@ -744,6 +731,18 @@ html,body{
   position: absolute;
   z-index: 10;
 }
+.con4_list>li>a::after{
+  /* a 에 flex 해놔서 사이즈 들어가있음 */
+  content: "";
+  width: 64px;
+  height: 64px;
+  background: url(../imgs/section04_arrow.png) center center no-repeat #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
 .con4_list>li>a>p:nth-child(1){
   position: absolute;
   left: 30px;
@@ -751,6 +750,7 @@ html,body{
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   font: 600 20px "Montserrat";
+  transition: all 0.3s;
 }
 .con4_list>li>a>p:nth-child(2){
   position: absolute;
@@ -758,15 +758,51 @@ html,body{
   bottom: 60px;
   font-weight: 700;
   font-size: 40px;
+  transition: all 0.3s;
 }
 
 
+
+/* hover 적용되는 범위작성 */
+@media all and (min-width: 993px){
+  .con4_list>li:hover{
+    transform: translate(0, -50px);
+  }
+  .con4_list>li>a:hover::after{
+    opacity: 1;
+  }
+  .con4_list>li:nth-child(1):hover{
+    background: url(../imgs/section04_img01_over.png) center center no-repeat;
+    background-size: cover;
+  }
+  .con4_list>li:nth-child(2):hover{
+    background: url(../imgs/section04_img02_over.png) center center no-repeat;
+    background-size: cover;
+  }
+  .con4_list>li:nth-child(3):hover{
+    background: url(../imgs/section04_img03_over.png) center center no-repeat;
+    background-size: cover;
+  }
+  .con4_list>li:nth-child(4):hover{
+    background: url(../imgs/section04_img04_over.png) center center no-repeat;
+    background-size: cover;
+  }
+}
 @media all and (max-width: 1400px){
   .con2_title:nth-child(1){
     margin-right: 20px;
   }
   .con2_title:nth-child(1)>p>br{
     display: none;
+  }
+  .con4_list>li{
+    height: 36vw;
+  }
+  .con4_list>li>a>p:nth-child(1){
+    top: 40px;
+  }
+  .con4_list>li>a>p:nth-child(2){
+    bottom: 40px;
   }
 }
 @media all and (max-width: 1200px){
@@ -787,6 +823,14 @@ html,body{
     padding-left: 50px;
     border-left: 0;
     border-top: 2px dotted #ddd;
+  }
+  .con4_list>li>a>p:nth-child(1){
+    top: 30px;
+    font-size: 17px;
+  }
+  .con4_list>li>a>p:nth-child(2){
+    bottom: 30px;
+    font-size: 32px;
   }
 }
 @media all and (max-width: 992px){
@@ -814,6 +858,35 @@ html,body{
     position: absolute;
     bottom: -80px;
     left: 40%;
+  }
+  .con4_list{
+    flex-wrap: wrap;
+  }
+  .con4_list>li{
+    width: 50%;
+    height: 60vw;
+  }
+  .con4_title>p:nth-child(1){
+    font-size: 24px;
+  }
+  .con4_title>p:nth-child(2){
+    margin: 20px 0 40px;
+  }
+  .con4_list>li:nth-child(1){
+    background: url(../imgs/section04_img01_over.png) center center no-repeat;
+    background-size: cover;
+  }
+  .con4_list>li:nth-child(2){
+    background: url(../imgs/section04_img02_over.png) center center no-repeat;
+    background-size: cover;
+  }
+  .con4_list>li:nth-child(3){
+    background: url(../imgs/section04_img03_over.png) center center no-repeat;
+    background-size: cover;
+  }
+  .con4_list>li:nth-child(4){
+    background: url(../imgs/section04_img04_over.png) center center no-repeat;
+    background-size: cover;
   }
 }
 @media all and (max-width: 767px){
@@ -847,6 +920,15 @@ html,body{
   .con3_right li a span:nth-child(3){
     font-size: 14px;
   }
+  .con4_list>li>a>p:nth-child(1){
+    display: none;
+  }
+  .con4_title>p:nth-child(1){
+    font-size: 20px;
+  }
+  .con4_title>p:nth-child(2){
+    font-size: 40px;
+  }
 }
 @media all and (max-width: 600px){
   .con2_box{
@@ -875,4 +957,175 @@ html,body{
   .con2_box>img{
     width: 60%;
   }
+}
+
+
+.footer{
+  width: 100%;
+  padding-bottom: 40px;
+  background-color: #111;
+  color: #fff;
+}
+.f_nav{
+  width: 95%;
+  max-width: 1620px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.f_menu{
+  display: flex;
+}
+.f_menu>li{
+  margin-right: 40px;
+}
+.family{
+  position: relative;
+  width: 220px;
+}
+.family_btn{
+  background: none;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+.family_btn::after{
+  content: "▲";
+  transition: all 0.3s;
+}
+.btn_toggle::after{
+  transform: rotateX(180deg);
+}
+
+.family_list{
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  background-color: #004f4a;
+  border-radius: 32px 0 32px 0px;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  height: 200px;
+  overflow: auto;
+}
+.family_list>li{
+  line-height: 1.8;
+}
+.copyright{
+  width: 95%;
+  max-width: 1620px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #333;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.copyright>span{
+  display: flex;
+  align-items: center;
+}
+.copyright>span:nth-child(2)::before{
+  content: "";
+  margin: 0 20px;
+  height: 10px;
+  border-left: 1px solid #666;
+}
+.copyright>span:nth-child(2)::after{
+  content: "";
+  margin: 0 20px;
+  height: 10px;
+  border-left: 1px solid #666;
+}
+.copyright>span:last-child{
+  width: 100%;
+  margin-top: 15px;
+}
+
+
+@media all and (max-width: 1200px){
+  .copyright>span:nth-child(1){
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .copyright>span:nth-child(2)::before{
+    display: none;
+  }
+  .copyright>span:last-child{
+    margin-top: 30px;
+  }
+}
+@media all and (max-width: 767px){
+  .f_menu>li>a{
+    font-size: 15px;
+  }
+  .family_list>li>a{
+    font-size: 15px;
+  }
+  .family_btn{
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 600px){
+  .f_nav{
+    flex-direction: column;
+  }
+  .f_menu>li:nth-child(2){
+    margin-right: 0;
+  }
+  .family{
+    margin-top: 20px;
+  }
+  .copyright>span{
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .copyright>span:nth-child(2)::after{
+    display: none;
+  }
+}
+
+
+/* top 버튼 */
+.top_btn{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #032523;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 200;
+}
+.top_btn>img{
+  transform: rotate(-90deg);
+}
+.top_btn>p{
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Montserrat";
+}
+.top_btn:hover{
+  border-radius: 50%;
 }
