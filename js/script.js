@@ -85,3 +85,5 @@ $(".top_btn").click(function(){
   /* body 엔 scrollTop 없음 */
   $("html").animate({scrollTop:"0"}, 500);
 })
+
+AOS.init();
